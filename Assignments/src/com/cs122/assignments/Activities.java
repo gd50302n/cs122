@@ -9,6 +9,14 @@ public class Activities {
 	public Activities
 	ActivityName = "Piano";
 	LocationType = "Indoor";
-	suggestedhours
+	suggestedhours = 4;
+	
 }
+
+public Activities(String activityName, String locationType, Suggestedhours);
+	this.activityName = activityName;
+	this.locationType = locationType;
+	this.suggestedHours = suggestedHours;
+	
+	public void activities 
 	
