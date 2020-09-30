@@ -2,6 +2,7 @@ package com.cs122.classlabs;
 
 import javafx.application.Application;
 
+
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
@@ -9,7 +10,7 @@ import javafx.scene.shape.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class GuiProgramming extends Application {
+public class Guiprogramming extends Application {
 	
 	void start(Stage primaryStage)
 	
@@ -26,11 +27,12 @@ public class GuiProgramming extends Application {
 	Group root = new Group(circle,rectangle,text1);
 	scene.scene = new scene(root, 500, 500)
 	primarystage.set("Gui programming");
+	primarystage.set(set);
 	
 	static void main(String[]args)
 	
 	launch(args);
-	//not sure why some of the words are not colorful
+	//not sure why some of the words are not colorful.
 	
 
 }

@@ -25,5 +25,6 @@ public class Vehicles {
 	
 	public void printDetails() {
 		System.out.println(this.typeOfCar);
+		
 	}
 }
