@@ -15,8 +15,6 @@ public void start(Stage PrimaryStage);
 		
 		Public static void main(String[]args);
 		
-		Launch (args);
+		Launch (args)		
 		
-		
-		
-}
+
