@@ -15,7 +15,18 @@ public class SolveTowers
     public static void main(String[] args)
     {
         TowersOfHanoi towers = new TowersOfHanoi(4);
+        if(numDisks = 1 )
+        	moveOneDisk(Start,end);
+        else
+        {
+        	System.out.println("first call in the methd")
+        }
+        
 
+        
+        
+        
         towers.solve();
+     
     }
 }

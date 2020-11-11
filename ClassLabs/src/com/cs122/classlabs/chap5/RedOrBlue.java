@@ -35,7 +35,7 @@ public class RedOrBlue extends Application
         blueButton = new Button("Blue!");
         blueButton.setOnAction(this::processColorButton);
         
-        pane = new FlowPane(redButton, blueButton,greenButton);
+        pane = new FlowPane(redButton, blueButton,greenbutton);
         pane.setAlignment(Pos.CENTER);
         pane.setHgap(20);
         pane.setStyle("-fx-background-color: white");
