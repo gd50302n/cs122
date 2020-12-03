@@ -7,15 +7,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class AgeconvertorPane {
-	private Label age;
+public class AgeconvertorPane extends GridPane {
+	private Label age,errorPlaceHolder;
 	private TextField yearOfbirth;
 	
   
-    public AgeConvertorPane() {
+    public void AgeConvertorPane() {
     
         Font font = new Font(18);
         
@@ -29,6 +30,7 @@ public class AgeconvertorPane {
         
         age = new Label("---");
         //age.setFont(font);
+        GridPane.setHalignment(age,HPos.CENTER);
         GridPane.setHalignment(age, HPos.CENTER);
         
         yearOfbirth = new TextField();
@@ -36,7 +38,8 @@ public class AgeconvertorPane {
         yearOfbirth.setPrefWidth(50);
         yearOfbirth.setAlignment(Pos.CENTER);
         yearOfbirth.setOnAction(this::processReturn);
-        
+        errorPlaceHolder = new Label(" ");
+        GridPane.setHalignment(errorPlaceHolder, HPos.CENTER);
         setAlignment(Pos.CENTER);
         setHgap(20);
         setVgap(10);
@@ -46,17 +49,30 @@ public class AgeconvertorPane {
         add(yearOfbirth, 1, 0);
         add(outputLabel, 0, 1);
         add(age, 1, 1);
+        add(errorPlaceHolder,0,2,1,2);
     }
-
-	}
 
 	public void processReturn(ActionEvent event) {
-    	age.setText(2020-Integer.parseInt(yearOfbirth.getText())+"");
-    }
+		int yOB; ageCalculated;
+		try {
+			yOB = Integer.parseInt(yearOfbirth.getText());
+			ageCalculated = 2020-yOB;
+			if (ageCalculated>100) {
+				errorPlaceHolder.setTextFill(Color.GREEN);
+				errorPlaceHolder.setText("Congratulations you have lived for more than 100 years");	
+			}
+			age.setText((2020-yOB)  +"");
+			
+		} catch (NumberFormatException n) {
+			errorPlaceHolder.setTextFill(Color.RED);
+			errorPlaceHolder.setText("Please enter a valid number");
+			yearOfbirth.clear();
+		}
+    	
   
        
 	
-}
+
 
 
     

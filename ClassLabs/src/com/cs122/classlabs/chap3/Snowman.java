@@ -52,7 +52,7 @@ public class Snowman extends Application
 
         Group snowman = new Group(base, middle, head, leftEye, rightEye,
             mouth, topButton, bottomButton, leftArm, rightArm, hat);
-        snowman.setTranslateX(170);
+        snowman.setTranslateX(230);
         snowman.setTranslateY(50);
 
         Circle sun = new Circle(50, 50, 30);
